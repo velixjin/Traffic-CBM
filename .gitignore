@@ -1,0 +1,43 @@
+# Generated feature caches and training outputs
+data/
+outputs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Editor and operating system files
+.vscode/
+.claude/
+.idea/
+.DS_Store
+._*
+*.swp
+*~
+
+# Large local artifacts
+*.pcap
+*.pcapng
+*.parquet
+*.pkl
+*.npy
+*.npz
+
+.env
+.env.*
+!.env.example
+/dataset/
+/raw/
+/baselines/
+*.pt
+*.pth
+*.ckpt

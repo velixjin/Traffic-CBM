@@ -1,0 +1,22 @@
+{
+  "stats": {
+    "workers": 16,
+    "max_packets": 200,
+    "sample_per_class": 3
+  },
+  "seq": {
+    "workers": 16,
+    "max_packets": 100,
+    "sample_per_class": 3
+  },
+  "bytes": {
+    "pkt_n": 5,
+    "payload_len": 64,
+    "start_offset": 38,
+    "sep": false,
+    "sanitize_mode": "none",
+    "preserve_tcp_timestamp": true,
+    "sample_per_class": 3,
+    "workers": 8
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "data": {
+    "data_root": "data"
+  },
+  "model": {
+    "fusion_mode": "6+4+5+3",
+    "num_concepts": 6,
+    "head": "ga2m",
+    "mlp_hidden": 2500,
+    "dropout": 0.2,
+    "stat": {
+      "use": true,
+      "concept_mode": "grouped",
+      "hidden": [
+        128,
+        128,
+        128,
+        64
+      ]
+    },
+    "seq": {
+      "use": true,
+      "max_len": 100,
+      "model_dim": 64,
+      "num_heads": 4,
+      "num_layers": 2,
+      "pooling": "cls"
+    },
+    "bytes": {
+      "use": true,
+      "use_packet": true,
+      "use_cross": true,
+      "len": 320,
+      "model_dim": 64,
+      "num_heads": 4,
+      "num_layers": 2,
+      "arch": "transformer",
+      "pooling": "cls",
+      "per_packet": false,
+      "pkt_len": 63,
+      "num_packets": 5
+    }
+  },
+  "train": {
+    "epochs": 80,
+    "batch_size": 256,
+    "label_smoothing": 0.05,
+    "early_stop_patience": 10,
+    "pretrain_ckpt": null,
+    "lr": 0.0003,
+    "lr_stat": null,
+    "lr_seq": null,
+    "lr_bytes": null,
+    "weight_decay": 0.01,
+    "sparsity_weight": 0.0,
+    "bytes_aux_weight": 0.1
+  },
+  "runtime": {
+    "num_workers": 8,
+    "log_interval": 100
+  }
+}
